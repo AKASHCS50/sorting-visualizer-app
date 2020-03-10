@@ -1,11 +1,17 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
+import NumberBars from "./components/NumberBars";
+import { NumberProvider } from "./components/NumberContext";
+import RandomButton from "./components/RandomButton";
 
 function App() {
   return (
-    <div className="App">
-     <h1>Hello</h1>
-    </div>
+    <NumberProvider>
+      <div className="App">
+        <RandomButton />
+        <NumberBars />
+      </div>
+    </NumberProvider>
   );
 }
 

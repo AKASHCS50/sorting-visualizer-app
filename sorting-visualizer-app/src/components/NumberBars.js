@@ -3,12 +3,13 @@ import { NumberContext } from "./NumberContext";
 import uuid from "react-uuid";
 import Bar from "./Bar";
 
-function NumberBars(active = 0) {
+function NumberBars() {
   const [arr, newState] = useContext(NumberContext);
+  // console.log(arr);
   return (
     <div className="Arraybox">
-      {arr.map(num => (
-        <Bar key={uuid()} num={num} active={active} />
+      {arr.map(numb => (
+        <Bar key={uuid()} num={numb.num} active={numb.active} />
       ))}
     </div>
   );

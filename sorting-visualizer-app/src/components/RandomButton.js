@@ -9,8 +9,9 @@ const RandomButton = () => {
   const State = e => {
     let brr = [];
     for (let i = 0; i < number_of_bars; i++) {
-      brr.push(randomNumber(5, 400));
+      brr.push({ num: randomNumber(5, 400), active: 0 });
     }
+    // console.log(brr);
     newState(brr);
   };
 
@@ -20,7 +21,7 @@ const RandomButton = () => {
 
   return (
     <div className="Random-Btn">
-      <li onClick={State}> New </li>
+      <button onClick={State}> New </button>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { NumberContext } from "./NumberContext";
 
-let number_of_bars = 50;
+let number_of_bars = 200;
 
 const RandomButton = () => {
   const [arr, newState] = useContext(NumberContext);
@@ -18,23 +18,9 @@ const RandomButton = () => {
     return Math.floor(Math.random() * (max - min) + min);
   }
 
-  function setBars(value) {
-    number_of_bars = value;
-  }
-
   return (
     <div className="Random-Btn">
-      <button onClick={State}>Generate Random Numbers</button>
-      <div className="slidecontainer">
-        <input
-          type="range"
-          min="4"
-          max="200"
-          className="slider"
-          id="myRange"
-          onChange={(number_of_bars = this.value)}
-        ></input>
-      </div>
+      <li onClick={State}> New </li>
     </div>
   );
 };

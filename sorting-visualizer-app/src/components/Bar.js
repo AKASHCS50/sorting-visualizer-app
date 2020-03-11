@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 
-function Bar({ num }) {
-  return <div style={barStyle(num)}>{num}</div>;
+function Bar({ num, active }) {
+  let color = "#fff";
+
+  if (active === 1) color = "blue";
+  if (active === 2) color = "green";
+  if (active === 3) color = "yellow";
+  if (active === 4) color = "pink";
+
+  return <div style={barStyle(num, color)}></div>;
 }
 
-const barStyle = num => {
+const barStyle = (num, color) => {
   return {
-    background: "#fff",
-    width: "20px",
+    backgroundColor: color,
+    width: "2px",
     height: num + "px"
   };
 };

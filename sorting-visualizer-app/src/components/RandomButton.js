@@ -1,29 +1,51 @@
-import React, { useContext } from "react";
-import { NumberContext } from "./NumberContext";
+import React, { Component } from "react";
+import { Consumer } from "./NumberContext";
 
-let number_of_bars = 200;
+const number_of_bars = 200;
 
-const RandomButton = () => {
-  const [arr, newState] = useContext(NumberContext);
-
-  const State = e => {
-    let brr = [];
-    for (let i = 0; i < number_of_bars; i++) {
-      brr.push({ num: randomNumber(5, 400), active: 0 });
-    }
-    // console.log(brr);
-    newState(brr);
+class RandomButton extends Component {
+  state = {
+    brr: {}
   };
 
-  function randomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min) + min);
-  }
+  GenerateRandom = (dispatch, e) => {
+    let crr = [];
+    for (let i = 0; i < number_of_bars; i++) {
+      crr.push({
+        num: this.randomNumber(5, 400),
+        active: 0
+      });
+    }
+    this.setState({
+      brr: crr
+    });
 
-  return (
-    <div className="Random-Btn">
-      <button onClick={State}> New </button>
-    </div>
-  );
-};
+    dispatch({
+      type: "CHANGE_ARR",
+      payload: crr
+    });
+  };
+
+  randomNumber = (min, max) => {
+    return Math.floor(Math.random() * (max - min) + min);
+  };
+
+  render() {
+    return (
+      <Consumer>
+        {value => {
+          const { arr, dispatch } = value;
+          return (
+            <div className="Random-Btn">
+              <button onClick={this.GenerateRandom.bind(this, dispatch)}>
+                New
+              </button>
+            </div>
+          );
+        }}
+      </Consumer>
+    );
+  }
+}
 
 export default RandomButton;

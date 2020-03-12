@@ -2,9 +2,10 @@ import React from "react";
 // import Bar from "../Bar";
 // import uuid from "react-uuid";
 
-function SelectionSort(arr, newState) {
+function SelectionSort(arr, dispatch) {
   var min, pos, temp;
   var brr = [...arr];
+  console.log(arr);
   for (let i = 0; i < 200; i++) {
     min = brr[i].num;
     pos = i;
@@ -21,7 +22,10 @@ function SelectionSort(arr, newState) {
     brr[i].num = min;
     brr[pos].num = temp;
     brr[i].active = 4;
-    newState(brr);
+    dispatch({
+      type: "CHANGE_ARR",
+      payload: brr
+    });
   }
   //   console.log(arr);
   //   console.log(brr);

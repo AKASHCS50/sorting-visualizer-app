@@ -6,12 +6,12 @@ function Navigation() {
   return (
     <div style={nav}>
       <ul style={nav_ul}>
-        <li style={heading}>Sorting Algorithm Visualizer</li>
-        <li style={sort_btn}>
-          <SortButton />
-        </li>
+        <li style={heading}> Sorting Algorithm Visualizer </li>
         <li style={sort_btn}>
           <RandomButton />
+        </li>
+        <li style={sort_btn}>
+          <SortButton />
         </li>
       </ul>
     </div>

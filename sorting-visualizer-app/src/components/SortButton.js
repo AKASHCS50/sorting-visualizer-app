@@ -1,18 +1,30 @@
-import React, { useContext } from "react";
-import { NumberContext } from "./NumberContext";
+import React from "react";
+import { Consumer } from "./NumberContext";
 import SelectionSort from "./algorithms/SelectionSort";
 
 const SortButton = () => {
-  const [arr, newState] = useContext(NumberContext);
-
-  const selectSort = () => {
-    SelectionSort(arr, newState);
+  const SelectAlgo = (arr, dispatch) => {
+    SelectionSort(arr, dispatch);
   };
 
   return (
-    <div className="Sort-Btn">
-      <button onClick={selectSort}> Sort </button>
-    </div>
+    <Consumer>
+      {value => {
+        const { arr, dispatch } = value;
+        return (
+          <div className="Sort-Btn">
+            <button
+              onClick={function() {
+                SelectAlgo(arr, dispatch);
+              }}
+            >
+              {" "}
+              Sort{" "}
+            </button>
+          </div>
+        );
+      }}
+    </Consumer>
   );
 };
 

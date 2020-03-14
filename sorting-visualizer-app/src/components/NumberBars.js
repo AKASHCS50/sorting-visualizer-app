@@ -12,7 +12,12 @@ class NumberBars extends Component {
           return (
             <div className="Arraybox">
               {arr.map(numb => (
-                <Bar num={numb.num} active={numb.active} key={uuid()} />
+                <Bar
+                  num={numb.num}
+                  active={numb.active}
+                  size={numb.size}
+                  key={uuid()}
+                />
               ))}
             </div>
           );

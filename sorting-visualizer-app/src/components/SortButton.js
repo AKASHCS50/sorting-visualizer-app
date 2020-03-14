@@ -1,25 +1,26 @@
 import React from "react";
 import { Consumer } from "./NumberContext";
 import SelectionSort from "./algorithms/SelectionSort";
+import InsertionSort from './algorithms/InsertionSort';
 
 const SortButton = () => {
-  const SelectAlgo = (arr, dispatch) => {
-    SelectionSort(arr, dispatch);
+  const SelectAlgo = (arr, dispatch, size) => {
+    // SelectionSort(arr, dispatch, size);
+    InsertionSort(arr, dispatch, size);
   };
 
   return (
     <Consumer>
       {value => {
-        const { arr, dispatch } = value;
+        const { arr, dispatch, size } = value;
         return (
           <div className="Sort-Btn">
             <button
               onClick={function() {
-                SelectAlgo(arr, dispatch);
+                SelectAlgo(arr, dispatch, size);
               }}
             >
-              {" "}
-              Sort{" "}
+              Sort
             </button>
           </div>
         );

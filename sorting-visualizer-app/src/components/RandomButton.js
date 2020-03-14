@@ -1,16 +1,14 @@
 import React, { Component } from "react";
 import { Consumer } from "./NumberContext";
 
-const number_of_bars = 200;
-
 class RandomButton extends Component {
   state = {
     brr: {}
   };
 
-  GenerateRandom = (dispatch, e) => {
+  GenerateRandom = (dispatch, size, e) => {
     let crr = [];
-    for (let i = 0; i < number_of_bars; i++) {
+    for (let i = 0; i < size; i++) {
       crr.push({
         num: this.randomNumber(5, 400),
         active: 0
@@ -34,10 +32,10 @@ class RandomButton extends Component {
     return (
       <Consumer>
         {value => {
-          const { arr, dispatch } = value;
+          const { dispatch, size } = value;
           return (
             <div className="Random-Btn">
-              <button onClick={this.GenerateRandom.bind(this, dispatch)}>
+              <button onClick={this.GenerateRandom.bind(this, dispatch, size)}>
                 New
               </button>
             </div>

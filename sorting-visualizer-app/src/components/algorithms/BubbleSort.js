@@ -4,13 +4,12 @@ function BubbleSort(arr, dispatch, size) {
     console.log(size);
     const firstLoop = async () => {
         for (let i = 0; i < (size - 1); i++) {
-            // let min = brr[i].num;
             let change = 0;
             // brr[i].active = 1;
             console.log(i);
             const secondLoop = async () => {
                 for (let j = 0; j < (size - i - 1); j++) {
-                    console.log(`resolved : ${i} ${j}`);
+                    // console.log(`resolved : ${i} ${j}`);
                     brr[j].active = 2;
                     brr[j + 1].active = 3;
                     if (brr[j + 1].num < brr[j].num) {
@@ -42,8 +41,6 @@ function BubbleSort(arr, dispatch, size) {
                 type: "CHANGE_ARR",
                 payload: brr
             });
-            //   console.log(arr);
-            //   console.log(brr);
         };
         firstLoop();
     }

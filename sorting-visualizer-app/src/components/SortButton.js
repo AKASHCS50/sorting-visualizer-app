@@ -3,12 +3,14 @@ import { Consumer } from "./NumberContext";
 import SelectionSort from "./algorithms/SelectionSort";
 import InsertionSort from "./algorithms/InsertionSort";
 import BubbleSort from "./algorithms/BubbleSort";
+import MergeSort from "./algorithms/MergeSort";
 
 const SortButton = () => {
   const SelectAlgo = (arr, dispatch, size) => {
     // SelectionSort(arr, dispatch, size);
     // InsertionSort(arr, dispatch, size);
-    BubbleSort(arr, dispatch, size);
+    // BubbleSort(arr, dispatch, size);
+    MergeSort(arr, dispatch, size);
   };
 
   return (

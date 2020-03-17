@@ -39,8 +39,6 @@ function SelectionSort(arr, dispatch, size) {
       });
       if (brr[size-1].active === 3) brr[size-1].active = 0;
     }
-    //   console.log(arr);
-    //   console.log(brr);
   };
   firstLoop();
 }

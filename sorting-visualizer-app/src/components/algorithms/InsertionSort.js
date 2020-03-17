@@ -6,7 +6,7 @@ function InsertionSort(arr, dispatch, size) {
     for (let i = 1; i < size; i++) {
       let temp = brr[i].num;
       let j = i - 1;
-    //   console.log(i);
+      //   console.log(i);
       const secondLoop = async () => {
         for (; j >= 0; j--) {
           brr[j].active = 3;
@@ -38,10 +38,7 @@ function InsertionSort(arr, dispatch, size) {
         type: "CHANGE_ARR",
         payload: brr
       });
-      //   if (brr[size - 1].active === 3) brr[size - 1].active = 0;
     }
-    //   console.log(arr);
-    //   console.log(brr);
   };
   firstLoop();
 }

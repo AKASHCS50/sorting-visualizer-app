@@ -5,25 +5,24 @@ import InsertionSort from "./algorithms/InsertionSort";
 import BubbleSort from "./algorithms/BubbleSort";
 import MergeSort from "./algorithms/MergeSort";
 
-const SortButton = () => {
+const SortButton = e => {
   const SelectAlgo = (arr, dispatch, size) => {
+    console.log(arr);
     // SelectionSort(arr, dispatch, size);
     // InsertionSort(arr, dispatch, size);
     // BubbleSort(arr, dispatch, size);
     MergeSort(arr, dispatch, size);
   };
-
   return (
     <Consumer>
       {value => {
         const { arr, dispatch, size } = value;
+        console.log(value);
+        console.log(arr);
+        console.log("hree");
         return (
           <div className="Sort-Btn">
-            <button
-              onClick={function() {
-                SelectAlgo(arr, dispatch, size);
-              }}
-            >
+            <button onClick={() => SelectAlgo(arr, dispatch, size)}>
               Sort
             </button>
           </div>

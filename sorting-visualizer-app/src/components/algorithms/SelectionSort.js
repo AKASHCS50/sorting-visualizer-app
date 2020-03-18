@@ -37,7 +37,7 @@ function SelectionSort(arr, dispatch, size) {
         type: "CHANGE_ARR",
         payload: brr
       });
-      if (brr[size-1].active === 3) brr[size-1].active = 0;
+      if (brr[size - 1].active === 3) brr[size - 1].active = 0;
     }
   };
   firstLoop();

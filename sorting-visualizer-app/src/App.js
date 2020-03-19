@@ -10,6 +10,7 @@ function App() {
       <div className="App">
         <Navigation />
         <NumberBars />
+        <nav class="navbar navbar-light bg-primary"></nav>
       </div>
     </NumberProvider>
   );

@@ -1,6 +1,6 @@
 import React, { Component, createContext } from "react";
 
-export const NumberContext = createContext();
+const NumberContext = createContext();
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -73,7 +73,7 @@ export class NumberProvider extends Component {
       { num: 142, active: 0 },
       { num: 141, active: 0 }
     ],
-    size: 4,
+    size: 3,
     dispatch: action => this.setState(state => reducer(state, action))
   };
   // console.log(this.state.size);

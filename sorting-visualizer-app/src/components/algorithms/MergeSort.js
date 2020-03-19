@@ -7,8 +7,8 @@ const MergeSort = (arr, dispatch, size) => {
     let n1, n2, i, j, k;
     n1 = m - l + 1;
     n2 = h - m;
-    let A = [],
-      B = [];
+    let A = [];
+    let B = [];
 
     for (i = l, j = 0; j < n1; i++, j++) A.push(brr[i]);
 
@@ -22,40 +22,18 @@ const MergeSort = (arr, dispatch, size) => {
     for (i = 0, j = 0, k = l; i < n1 && j < n2; k++) {
       console.log(`${i}, ${j}, ${k}`);
       if (A[i].num < B[j].num) {
-        arr[k].num = A[i].num;
+        brr[k].num = A[i].num;
         i++;
       } else {
-        arr[k].num = B[j].num;
+        // brr[k].num = B[j].num;
         j++;
       }
-      // dispatch({
-      //   type: "CHANGE_ARR",
-      //   payload: brr
-      // });
-      // await new Promise(resolve => setTimeout(resolve, 10));
     }
 
-    while (i < n1) {
-      arr[k].num = A[i].num;
-      i++;
-      k++;
-      // dispatch({
-      //   type: "CHANGE_ARR",
-      //   payload: brr
-      // });
-      // await new Promise(resolve => setTimeout(resolve, 10));
-    }
+    // for (; i < n1; i++, k++) brr[k].num = A[i].num;
 
-    while (j < n2) {
-      arr[k].num = B[j].num;
-      j++;
-      k++;
-      // dispatch({
-      //   type: "CHANGE_ARR",
-      //   payload: brr
-      // });
-      // await new Promise(resolve => setTimeout(resolve, 10));
-    }
+    // for (; j < n2; j++, k++) brr[k].num = B[j].num;
+
     console.log("here");
   };
 
@@ -63,29 +41,17 @@ const MergeSort = (arr, dispatch, size) => {
     if (l < h) {
       let m = Math.floor((l + h) / 2);
       console.log(`I ${l}, ${m}`);
-      await Sort(brr, l, m);
       console.log(`II ${m + 1}, ${h}`);
+      await Sort(brr, l, m);
       await Sort(brr, m + 1, h);
       console.log(`III ${l}, ${h}, ${m}`);
       await merge(brr, l, h, m);
-
-      // dispatch({
-      //   type: "CHANGE_ARR",
-      //   payload: brr
-      // });
-      // await new Promise(resolve => setTimeout(resolve, 10));
     }
     console.log("here");
   };
 
   Sort(brr, 0, size - 1);
-  console.log("COmpleted");
-  dispatch({
-    type: "CHANGE_ARR",
-    payload: brr
-  });
-  console.log(arr);
-  // console.log(brr);
-}
+  console.log("Completed");
+};
 
 export default MergeSort;

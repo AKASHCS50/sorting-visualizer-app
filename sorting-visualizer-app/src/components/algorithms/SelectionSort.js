@@ -16,7 +16,7 @@ function SelectionSort(arr, dispatch, size) {
             if (pos !== i) brr[pos].active = 0;
             min = brr[j].num;
             pos = j;
-            brr[j].active = 2;
+            brr[j].active = 4;
           }
           if (brr[j - 1].active === 3) brr[j - 1].active = 0;
           dispatch({
@@ -32,7 +32,7 @@ function SelectionSort(arr, dispatch, size) {
       brr[i].num = min;
       brr[pos].num = temp;
       brr[pos].active = 0;
-      brr[i].active = 4;
+      brr[i].active = 2;
       dispatch({
         type: "CHANGE_ARR",
         payload: brr

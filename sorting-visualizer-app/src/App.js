@@ -10,7 +10,12 @@ function App() {
       <div className="App">
         <Navigation />
         <NumberBars />
-        <nav class="navbar navbar-light bg-primary"></nav>
+        <nav className="navbar navbar-light bg-primary text-center footer">
+          <p className="footer-txt">
+            For the <span id="ft-icon">❤</span> of web - © 2020 Akash
+            Sharma
+          </p>
+        </nav>
       </div>
     </NumberProvider>
   );

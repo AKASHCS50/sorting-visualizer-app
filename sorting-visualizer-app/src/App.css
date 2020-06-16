@@ -16,3 +16,18 @@
   width: 90vw;
   margin-left: 5vw;
 }
+
+.footer {
+  padding-bottom: 0;
+  line-height: 0.6;
+}
+
+.footer-txt{
+    color: rgba(255, 255, 255, 0.65);
+    font-weight: 600;
+    width: 100vw;
+}
+
+#ft-icon {
+  color: #9e2323;
+}

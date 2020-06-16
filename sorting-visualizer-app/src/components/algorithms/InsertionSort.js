@@ -1,7 +1,7 @@
 function InsertionSort(arr, dispatch, size) {
   var brr = [...arr];
-  console.log(arr);
-  console.log(size);
+  // console.log(arr);
+  // console.log(size);
   const firstLoop = async () => {
     for (let i = 1; i < size; i++) {
       let temp = brr[i].num;

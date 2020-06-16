@@ -5,24 +5,45 @@ import InsertionSort from "./algorithms/InsertionSort";
 import BubbleSort from "./algorithms/BubbleSort";
 import MergeSort from "./algorithms/MergeSort";
 
-const SortButton = e => {
+const sort_btn = {
+  backgroundColor: "transparent",
+  padding: ".5rem",
+  border: "0",
+  color: "rgba(255,255,255,1)",
+};
+
+const SortButton = (e) => {
   const SelectAlgo = (arr, dispatch, size) => {
-    console.log(arr);
-    // SelectionSort(arr, dispatch, size);
-    // InsertionSort(arr, dispatch, size);
-    // BubbleSort(arr, dispatch, size);
-    MergeSort(arr, dispatch, size);
+    let sort_method = document.getElementById("SelectSort").value;
+
+    switch (sort_method) {
+      case "sel":
+        SelectionSort(arr, dispatch, size);
+        break;
+      case "ins":
+        InsertionSort(arr, dispatch, size);
+        break;
+      case "bub":
+        BubbleSort(arr, dispatch, size);
+        break;
+      case "mer":
+        MergeSort(arr, dispatch, size);
+        break;
+      default:
+        SelectionSort(arr, dispatch, size);
+    }
   };
   return (
     <Consumer>
-      {value => {
+      {(value) => {
         const { arr, dispatch, size } = value;
-        console.log(value);
-        console.log(arr);
-        console.log("hree");
         return (
           <div className="Sort-Btn">
-            <button onClick={() => SelectAlgo(arr, dispatch, size)}>
+            <button
+              style={sort_btn}
+              className="btn btn-secondary btn-medium rounded"
+              onClick={() => SelectAlgo(arr, dispatch, size)}
+            >
               Sort
             </button>
           </div>

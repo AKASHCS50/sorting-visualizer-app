@@ -73,7 +73,7 @@ export class NumberProvider extends Component {
       { num: 142, active: 0 },
       { num: 141, active: 0 }
     ],
-    size: 3,
+    size: 50,
     dispatch: action => this.setState(state => reducer(state, action))
   };
   // console.log(this.state.size);

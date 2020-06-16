@@ -1,12 +1,12 @@
 function BubbleSort(arr, dispatch, size) {
     var brr = [...arr];
-    console.log(arr);
-    console.log(size);
+    // console.log(arr);
+    // console.log(size);
     const firstLoop = async () => {
         for (let i = 0; i < (size - 1); i++) {
             let change = 0;
             // brr[i].active = 1;
-            console.log(i);
+            // console.log(i);
             const secondLoop = async () => {
                 for (let j = 0; j < (size - i - 1); j++) {
                     // console.log(`resolved : ${i} ${j}`);

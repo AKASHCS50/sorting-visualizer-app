@@ -1,13 +1,13 @@
 function SelectionSort(arr, dispatch, size) {
   var brr = [...arr];
-  console.log(arr);
-  console.log(size);
+  // console.log(arr);
+  // console.log(size);
   const firstLoop = async () => {
     for (let i = 0; i < size; i++) {
       let min = brr[i].num;
       let pos = i;
       brr[i].active = 1;
-      console.log(i);
+      // console.log(i);
       let j = i + 1;
       const secondLoop = async () => {
         for (; j < size; j++) {

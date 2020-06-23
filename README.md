@@ -9,8 +9,13 @@
 <br />
 
 
-## Sorting Visualizer App
-<p>
+<h1 align="center">Sorting Visualizer App</h1>
+    
+<p align="center">   
+<img src="https://github.com/AKASHCS50/Sorting-Visualizer-App/blob/master/sorting-visualizer-app/public/Screenshot%20(219).png" 
+width="600" height="300">
+</p>
+<p align="center">
     <br />
     <a href="https://github.com/AKASHCS50/Sorting-Visualizer-App/blob/master/README.md"><strong>Explore the docs »</strong></a>
     <br />
@@ -20,7 +25,6 @@
     <a href="https://github.com/AKASHCS50/Sorting-Visualizer-App/issues">Report Bug</a>
     ·
     <a href="https://github.com/AKASHCS50/Sorting-Visualizer-App/issues">Request Feature</a>
-  </p>
 </p>
 
 

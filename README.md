@@ -1,7 +1,7 @@
 [![GitHub license](https://img.shields.io/github/license/AKASHCS50/Sorting-Visualizer-App)](https://github.com/AKASHCS50/Sorting-Visualizer-App/blob/master/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/AKASHCS50/Sorting-Visualizer-App)](https://github.com/AKASHCS50/Sorting-Visualizer-App/issues)
 [![GitHub stars](https://img.shields.io/github/stars/AKASHCS50/Sorting-Visualizer-App)](https://github.com/AKASHCS50/Sorting-Visualizer-App/stargazers)
-[![Linkedin](https://img.shields.io/badge/opensource-linkedin-blue.svg?style=flat-square)](https://www.linkedin.com/in/akash-sharma-1a5433178/)
+[![Linkedin](https://img.shields.io/badge/opensource-linkedin-blue.svg?style=flat-square)](https://www.linkedin.com/in/-akash-sharma/)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)
 
 

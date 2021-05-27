@@ -20,14 +20,14 @@ const Navigation = (props) => {
 
   return (
     <div>
-      <Navbar color="light" light expand="md">
+      <Navbar color="light" light expand="md" className="px-3">
         <NavbarBrand href="/" style={heading}>
           Sorting Visualizer App
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <div>
-            <Navbar color="dark" dark expand="md" className="rounded">
+            <Navbar color="dark" dark expand="md" className="rounded p-3">
               <Nav className="mr-auto" navbar>
                 <NavItem>
                   <NavLink href="https://github.com/AKASHCS50/Sorting-Visualizer-App">
@@ -42,7 +42,7 @@ const Navigation = (props) => {
                   type="select"
                   name="select"
                   id="SelectSort"
-                  className="ml-md-3 mr-md-1"
+                  className="ml-md-3 mr-md-1 mx-3"
                 >
                   <option value="sel">Selection Sort</option>
                   <option value="ins">Insertion Sort</option>
@@ -52,7 +52,7 @@ const Navigation = (props) => {
             </Navbar>
           </div>
         </Collapse>
-        <Navbar color="dark" dark expand="md" className="rounded mr-3">
+        <Navbar color="dark" dark expand="md" className="rounded mr-3 px-3">
           <Nav className="mr-auto" navbar>
             <NavItem>
               <SortButton></SortButton>
